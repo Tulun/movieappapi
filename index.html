@@ -10,20 +10,31 @@
 </head>
 <body>
   <h1> Hellooooo </h1>
-<form>
+<p>
+<form id="single-search">
+    <label> Single Result Search
+        <input type="text" name="movie" placeholder="movie title" />
+    </label>
+    <button>Go!</button>
+</form>
+</p>
+<p>
+<form id="multi-search"> Multiple Result Search
     <label>
         <input type="text" name="movie" placeholder="movie title" />
     </label>
     <button>Go!</button>
 </form>
+</p>
 <script id="movie-template" type="text/x-handlebars-template"> 
-
+<div>
     <h3 class="title">{{Title}}</h3>
     <p class="plot">{{Plot}}</p>
     <span class="poster"><img src="{{Poster}}"></span>
     <p>Year: {{Year}}</p>
     <p> IMDB Rating: {{imdbRating}} <span class="imdb-rating"></span>  <span class="imdb-votes">#Votes: {{imdbVotes}}</span></p>
     <p> Rotten Tomatoes Rating: {{tomatoRating}} <span class="tomato-votes" > #Reviews: {{tomatoReviews}}</span> </p>
+</div>
 </script> 
 <div id="place-content">
 </div>
