@@ -1,0 +1,10 @@
+.tomato-image {
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 30px;
+}
+
+h1 {
+  color: blue;
+}

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="application.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>
+<script src="handlebars-v4.0.2.js"></script>
 <script src="application.js" type="text/javascript"></script>
   <title>Movie App</title>
 </head>
@@ -14,14 +16,16 @@
     </label>
     <button>Go!</button>
 </form>
+<script id="movie-template" type="text/x-handlebars-template"> 
 
-<div id="container">
-    <h3 class="title">Title</h3>
-    <p class="plot">Plot</p>
-    <span class="poster">Poster</span>
-    <p>Year: <span class='year'> </span></p>
-    <p> IMDB Rating: <span class="imdb-rating"></span> <span> #Votes:</span><span class="imdb-votes"></span></p>
-    <p> Rotten Tomatoes Rating:<span class="tomato-rating"></span> <span>#Votes:</span> <span class="tomato-votes"></span><span class="tomato-image"></span></p>
+    <h3 class="title">{{Title}}</h3>
+    <p class="plot">{{Plot}}</p>
+    <span class="poster"><img src="{{Poster}}"></span>
+    <p>Year: {{Year}}</p>
+    <p> IMDB Rating: {{imdbRating}} <span class="imdb-rating"></span>  <span class="imdb-votes">#Votes: {{imdbVotes}}</span></p>
+    <p> Rotten Tomatoes Rating: {{tomatoRating}} <span class="tomato-votes" > #Votes: {{tomatoReviews}}</span> </p>
+</script> 
+<div id="place-content">
 </div>
 </body>
 </html>
